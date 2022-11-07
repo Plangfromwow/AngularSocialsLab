@@ -1,0 +1,15 @@
+<div class="text-center">
+<div *ngFor="let post of listOfPosts">
+    <div class="divider"></div>
+    <app-single-post [DisplayPost]="post"></app-single-post>
+    <div class="divider"></div>
+    
+</div>
+
+<button (click)="showForm()" class="btn btn-sm btn-secondary m-2">What's on your mind?</button>
+<div *ngIf="createPostForm" class="text-md m-2">
+    Title: <input type="text" [(ngModel)]="newPost.title" class="input-bordered input-primary"/>
+    Thought: <input type="text" [(ngModel)]="newPost.thought" class="input-bordered input-primary"/><br>
+    <button (click)="addThought()" class="btn btn-sm btn-primary m-2">Add Thought</button>
+</div>
+</div>
