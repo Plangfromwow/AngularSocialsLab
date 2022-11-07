@@ -7,9 +7,15 @@
 </div>
 
 <button (click)="showForm()" class="btn btn-sm btn-secondary m-2">What's on your mind?</button>
-<div *ngIf="createPostForm" class="text-md m-2">
-    Title: <input type="text" [(ngModel)]="newPost.title" class="input-bordered input-primary"/>
-    Thought: <input type="text" [(ngModel)]="newPost.thought" class="input-bordered input-primary"/><br>
+<div *ngIf="createPostForm" class="form-control w-full p-2">
+    <label class="label">
+    <span class="label-text">Title</span> 
+    </label>    
+    <input type="text" [(ngModel)]="newPost.title" class="input-bordered input-primary input-md" placeholder="Title Goes Here"/>
+    <label class="label">
+        <span class="label-text">Thought</span> 
+    </label> 
+     <input type="text" [(ngModel)]="newPost.thought" class="input-bordered input-primary input-md" placeholder="Thought Goes Here"/><br>
     <button (click)="addThought()" class="btn btn-sm btn-primary m-2">Add Thought</button>
 </div>
 </div>
