@@ -45,4 +45,13 @@ export class SocialPostsComponent implements OnInit {
     this.createPostForm = !this.createPostForm;
   }
 
+  removePostFromList(removePost:Post){
+    for(let i = 0; i < this.listOfPosts.length;i++){
+      if(this.listOfPosts[i] === removePost){
+        this.listOfPosts.splice(i,1);
+        return;
+      }
+    }
+  }
+
 }

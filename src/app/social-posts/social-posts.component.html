@@ -1,13 +1,13 @@
 <div class="text-center">
 <div *ngFor="let post of listOfPosts">
     <div class="divider"></div>
-    <app-single-post [DisplayPost]="post"></app-single-post>
+    <app-single-post [DisplayPost]="post" (deletePost)="removePostFromList($event)"></app-single-post>
     <div class="divider"></div>
     
 </div>
 
 <button (click)="showForm()" class="btn btn-sm btn-secondary m-2">What's on your mind?</button>
-<div *ngIf="createPostForm" class="form-control w-full p-2">
+<div *ngIf="createPostForm" class="form-control w-full p-2 max-w-5xl">
     <label class="label">
     <span class="label-text">Title</span> 
     </label>    
